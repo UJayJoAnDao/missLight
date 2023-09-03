@@ -19,4 +19,4 @@ function send() {
   });
 };
 
-sendButton.addEventListener('click', send);
+sendButton.click(send);
