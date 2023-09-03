@@ -5,7 +5,7 @@ function send() {
   let phone = document.querySelector('#phoneValue').value;
   $.ajax({
     type: "get",
-    url: "剛剛取得的 API，請直接貼上",
+    url: "https://script.google.com/macros/s/AKfycbyIOG5SsKFwUvupQJuL3h6EtQHzIJW0tMLsrPA5P-EGd4s7ddxMFPI1_kUp0XW6C-YG/exec",
     data: {
       "name": name, /* 屬性名稱需與 Google Sheet 相同 */
       "phone": phone, /* 屬性名稱需與 Google Sheet 相同 */
