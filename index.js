@@ -12,9 +12,9 @@ function send() {
     type: "get",
     url: "https://script.google.com/macros/s/AKfycbyIOG5SsKFwUvupQJuL3h6EtQHzIJW0tMLsrPA5P-EGd4s7ddxMFPI1_kUp0XW6C-YG/exec",
     data: {
-      "name": ID, /* 屬性名稱需與 Google Sheet 相同 */
-      "phone": "123", /* 屬性名稱需與 Google Sheet 相同 */
-      "time": DATE.toString()
+      "light": ID, /* 屬性名稱需與 Google Sheet 相同 */
+      "time": DATE.toString(), /* 屬性名稱需與 Google Sheet 相同 */
+      "special": 0
     },
     dataType: "JSON",
     success: function(response) {
