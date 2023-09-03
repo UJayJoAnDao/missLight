@@ -23,10 +23,10 @@ function send() {
 };
 
 optionsBtn.click(send);
-optionButton.click(function(){
-  if($(this).css("display")=="none"){
-    $(this).css("display","flex");
+circleButton.click(function(){
+  if(optionButton.css("display")=="none"){
+    optionButton.css("display","flex");
   }else{
-    $(this).css("display","none");
+    optionButton.css("display","none");
   }
 });
