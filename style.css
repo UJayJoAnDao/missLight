@@ -59,31 +59,3 @@ body {
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中 */
 }
-
-
-.heart {
-    background-color: red;
-    height: 50px;
-    position: relative;
-    width: 50px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.heart:before,
-.heart:after {
-    content: "";
-    background-color: red;
-    border-radius: 25px 25px 0 0;
-    height: 50px;
-    position: absolute;
-    width: 50px;
-}
-
-.heart:before {
-    left: -25px;
-}
-
-.heart:after {
-    top: -25px;
-}
