@@ -2,153 +2,19 @@
 <html>
 <head>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .circle-menu {
-            position: relative;
-            text-align: center;
-        }
-
-        .circle-button {
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: center; /* 水平居中 */
-            align-items: center; /* 垂直居中 */
-            font-size: 100px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .option-button {
-            height:100px;
-            display: flex;
-            justify-content: space-between; /* 使用空间均匀分布按钮 */
-            align-items: center;
-            position: absolute;
-            top: -50%; /* 垂直居中 */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            /* border: 1px solid #ccc; */
-            border-radius: 5px;
-            padding: 0px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .option-button button {
-            height:250px;
-            width:150px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 5px 10px;
-            margin: 0px 10px;
-            cursor: pointer;
-            font-size:50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* 水平居中 */
-            align-items: center; /* 垂直居中 */
-        }
-    </style>
+    
     
 </head>
 <body>
-    <div class="circle-menu">
-        <div class="circle-button" id="myButton">123</div>
-        <div class="option-button" id="options">
-            <button id="btn1">選項1</button>
-            <button onclick="function2()">選項2</button>
-            <button onclick="function3()">選項3</button>
-            <button onclick="function4()">選項4</button>
-            <button onclick="function5()">選項5</button>
-        </div>
+  <div class="container">
+    <div>
+      <span>您的大名：</span><input id="nameValue" type="text">
     </div>
-    <script>
-        let optionButton = $("#options");
-        let circleButton = $("#myButton");
-        
-
-        // optionButton.click(function(){
-        //   $(this).css("display","none");
-        // });
-        
-        optionButton.css("display","none");
-        
-        
-        $("#btn1").click(function(){
-          alert("123");
-          function send() {
-            $.ajax({
-              url: "https://script.google.com/macros/s/AKfycbxBX-2Zpv8GJmVyVybbSxR7vGoyDhVtNyeGQeHmc0snmeU1ugS50lIbgcujol0Z2Oet/exec",
-              data: {
-                  "value":"1"
-              },
-              success: function(response) {
-                if(response == "成功"){
-                  alert("成功");
-                }
-              },
-            });
-          };
-        });
-        circleButton.click(function(){
-          alert("circle")
-          if(optionButton.css("display")=="none"){
-            optionButton.css("display","flex");
-          }else{
-            optionButton.css("display","none");
-          }
-        });
-
-        // optionButton.click(function(){
-        //   alert("456");
-        // });
-        // console.log(optionButton);
-        // optionButton.css("display",none);
-        // optionButton.style.display = "none";
-        // circleButton.addEventListener("click", function() {
-        //     if (optionButton.style.display === "flex") {
-        //         optionButton.style.display = "none";
-        //     } else {
-        //         optionButton.style.display = "flex";
-        //     }
-        // });
-
-        function function1() {
-            alert("選項1的功能");
-            // google.script.run.writeToSheet(["数据1", "数据2", "数据3"]);
-        }
-
-        function function2() {
-            alert("選項2的功能");
-        }
-
-        function function3() {
-            alert("選項3的功能");
-        }
-
-        function function4() {
-            alert("選項4的功能");
-        }
-
-        function function5() {
-            alert("選項5的功能");
-        }
-    </script>
+    <div>
+      <span>您的電話：</span><input id="phoneValue" type="text">
+    </div>
+    <button>送出</button>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
