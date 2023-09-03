@@ -5,11 +5,13 @@ optionButton.css("display","none");
 
 function send() {
   alert("已按下");
+  let ID = this.id;
+  alert(ID);
   $.ajax({
     type: "get",
     url: "https://script.google.com/macros/s/AKfycbyIOG5SsKFwUvupQJuL3h6EtQHzIJW0tMLsrPA5P-EGd4s7ddxMFPI1_kUp0XW6C-YG/exec",
     data: {
-      "name": $(this).id.toString(), /* 屬性名稱需與 Google Sheet 相同 */
+      "name": ID, /* 屬性名稱需與 Google Sheet 相同 */
       "phone": "123", /* 屬性名稱需與 Google Sheet 相同 */
     },
     dataType: "JSON",
