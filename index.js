@@ -15,7 +15,7 @@ function send() {
     data: {
       "light": ID, /* 屬性名稱需與 Google Sheet 相同 */
       "sender": sender,
-      "time": DATE.toString(), /* 屬性名稱需與 Google Sheet 相同 */
+      "time": DATE.toJSON(), /* 屬性名稱需與 Google Sheet 相同 */
       "special": 0
     },
     dataType: "JSON",
