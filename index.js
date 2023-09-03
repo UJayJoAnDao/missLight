@@ -1,4 +1,4 @@
-let sendButton = $('#myButton');
+let sendButton = $('#btn1');
 
 function send() {
   alert("已按下");
