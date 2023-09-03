@@ -6,6 +6,7 @@ optionButton.css("display","none");
 function send() {
   alert("已按下");
   let ID = this.id;
+  let DATE = new Date();
   alert(ID);
   $.ajax({
     type: "get",
@@ -13,6 +14,7 @@ function send() {
     data: {
       "name": ID, /* 屬性名稱需與 Google Sheet 相同 */
       "phone": "123", /* 屬性名稱需與 Google Sheet 相同 */
+      "time": DATE.toString()
     },
     dataType: "JSON",
     success: function(response) {
